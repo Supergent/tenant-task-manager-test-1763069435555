@@ -1,0 +1,41 @@
+{
+  "name": "task-manager-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vinxi dev",
+    "build": "vinxi build",
+    "start": "vinxi start",
+    "convex:dev": "convex dev",
+    "convex:deploy": "convex deploy --cmd 'bun run build'",
+    "deploy": "bun run convex:deploy && wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-router": "^1.93.0",
+    "@tanstack/router-devtools": "^1.93.0",
+    "@tanstack/router-plugin": "^1.93.1",
+    "@tanstack/start": "^1.93.0",
+    "convex": "^1.17.4",
+    "@convex-dev/better-auth": "0.9.6",
+    "better-auth": "1.3.27",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vinxi": "^0.5.2"
+  },
+  "devDependencies": {
+    "@tanstack/router-generator": "^1.93.1",
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vite-tsconfig-paths": "^5.1.4",
+    "wrangler": "^3.103.0"
+  }
+}
